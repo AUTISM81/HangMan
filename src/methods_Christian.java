@@ -33,8 +33,6 @@ public class methods_Christian {
         int correct = 0;
         int falskt = 0;
 
-        String ord = "gay";
-
         int längd = ord.length();
 
         String check = "";
