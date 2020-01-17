@@ -1,3 +1,5 @@
+import com.sun.deploy.security.SelectableSecurityManager;
+
 import java.util.Scanner;
 
 public class methods_Christian {
@@ -6,7 +8,7 @@ public class methods_Christian {
         Scanner kb = new Scanner(System.in);
 
         //antalspelare val
-        System.out.println("Skulle du vela spela med en eller två spelare?");
+        System.out.println("would you like to play one or two players?");
 
         int antal = kb.nextInt();
 
@@ -38,7 +40,7 @@ public class methods_Christian {
         String check = "";
 
         while (falskt < 10 && correct < längd) {
-            System.out.println("Gissa en bokstav");
+            System.out.println("Guess a letter");
             char bokstav = kb.next().charAt(0);
 
             int indexC = check.indexOf(bokstav);
@@ -51,7 +53,7 @@ public class methods_Christian {
                     falskt++;
                 }
             } else {
-                System.out.println("Du har redan gissat det");
+                System.out.println("You have already guessed that");
             }
             check += bokstav;
         }
@@ -61,10 +63,16 @@ public class methods_Christian {
         if (correct == 10)
             result = correct;
         else
-            result = falskt;
+            result = falskt * -1;
 
         return result;
     }
 
-    
+    public static void resultat(String[] args) {
+
+        if (resultat > 0)
+            System.out.println("You won the game");
+        else
+            System.out.println("You lost the game");
+    }
 }
