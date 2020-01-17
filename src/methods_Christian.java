@@ -23,7 +23,7 @@ public class methods_Christian {
         return ord;
     }
 
-    public static void gissa_ordet(String[] args) {
+    public static int gissa_ordet(String[] args) {
         //scanner
         Scanner kb = new Scanner(System.in);
 
@@ -31,19 +31,40 @@ public class methods_Christian {
         int correct = 0;
         int falskt = 0;
 
+        String ord = "gay";
+
         int längd = ord.length();
 
-        while (falskt < 10 || correct < längd) {
+        String check = "";
+
+        while (falskt < 10 && correct < längd) {
             System.out.println("Gissa en bokstav");
             char bokstav = kb.next().charAt(0);
 
-            int index = ord.indexOf(bokstav);
-            if (index >= 0) {
-                correct++;
+            int indexC = check.indexOf(bokstav);
+
+            if (indexC < 0) {
+                int index = ord.indexOf(bokstav);
+                if (index >= 0) {
+                    correct++;
+                } else {
+                    falskt++;
+                }
             } else {
-                falskt++;
+                System.out.println("Du har redan gissat det");
             }
+            check += bokstav;
         }
-        System.out.println("Congrats");
+
+        int result;
+
+        if (correct == 10)
+            result = correct;
+        else
+            result = falskt;
+
+        return result;
     }
+
+    
 }
