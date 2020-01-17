@@ -5,7 +5,7 @@ import java.util.Random;
 import java.util.stream.Stream;
 
 public class methods_Rasmus {
-    public static String main(String[] args) throws IOException {
+    public static String Dator() throws IOException {
 
         // slumpar rad
         Random randomGenerator = new Random();

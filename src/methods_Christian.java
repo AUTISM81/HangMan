@@ -3,7 +3,7 @@ import com.sun.deploy.security.SelectableSecurityManager;
 import java.util.Scanner;
 
 public class methods_Christian {
-    public static int antalspelare(String[] args) {
+    public static int antalspelare() {
         //scanner
         Scanner kb = new Scanner(System.in);
 
@@ -15,7 +15,7 @@ public class methods_Christian {
         return antal;
     }
 
-    public static String ordval(String[] args) {
+    public static String ordval() {
         //scanner
         Scanner kb = new Scanner(System.in);
 
@@ -25,7 +25,7 @@ public class methods_Christian {
         return ord;
     }
 
-    public static int gissa_ordet(String[] args) {
+    public static int gissa_ordet(String ord) {
         //scanner
         Scanner kb = new Scanner(System.in);
 
