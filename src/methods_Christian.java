@@ -23,6 +23,9 @@ public class methods_Christian {
         System.out.println("Write the word you would like your opponent to guess!");
         String ord = kb.nextLine();
 
+        for (int i = 0; i < 100; i++){
+            System.out.println();
+        }
         return ord;
     }
 
@@ -38,18 +41,22 @@ public class methods_Christian {
 
         String check = "";
         String word = "";
-        String right = "";
+        char[] array = new char[längd];
+
+        for (int i = 0; i < array.length; i++){
+            array[i] = '-';
+        }
+        System.out.println("");
 
         while (falskt < 10 && correct < längd) {
             System.out.println("Guess a letter");
             char bokstav = kb.next().charAt(0);
-
+            
             int indexC = check.indexOf(bokstav);
 
             int count = 0;
 
             for (int i = 0; i < längd; i++){
-
                 if (ord.charAt(i) == bokstav){
                     count++;
                 }
@@ -64,9 +71,13 @@ public class methods_Christian {
                 if (index >= 0) {
                     correct++;
                     System.out.println("Your guess was correct, nice job!" + "\n");
-                    right += " " + bokstav;
-                    word += " " + bokstav;
 
+                    for (int i = 0; i < array.length; i++){
+                        if (bokstav == ord.charAt(i)){
+                            array[i] = bokstav;
+                        }
+                    }
+                    System.out.println("");
 
                 } else {
                     falskt++;
@@ -78,15 +89,18 @@ public class methods_Christian {
             }
 
             check += bokstav;
-            System.out.println("All guesses: " + word);
+            System.out.println("guesses: " + word);
 
-            // fixa så den visar ordet just nu
-            System.out.println("Correct guesses: " + right + "\n");
+            System.out.print("word:" );
+            for (int i = 0; i < array.length; i++){
+                System.out.print(array[i]);
+            }
+            System.out.println();
         }
 
         int resultat;
 
-        if (correct == 10)
+        if (correct == längd)
             resultat = correct;
         else
             resultat = falskt * -1;
