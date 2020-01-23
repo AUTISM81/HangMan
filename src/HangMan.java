@@ -6,15 +6,16 @@ public class HangMan {
 
         int antal = methods_Christian.antalspelare();
         if (antal >= 2){
-            methods_Christian.ordval();
             ord = methods_Christian.ordval();
         } else {
-            methods_Rasmus.Dator();
             ord = methods_Rasmus.Dator();
         }
 
         int resultat = methods_Christian.gissa_ordet(ord);
 
         methods_Christian.results(resultat);
+        System.out.println("The word was:" + ord);
+
+
     }
 }

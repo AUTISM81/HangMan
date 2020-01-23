@@ -46,23 +46,42 @@ public class methods_Christian {
 
             int indexC = check.indexOf(bokstav);
 
+            int count = 0;
+
+            for (int i = 0; i < längd; i++){
+
+                if (ord.charAt(i) == bokstav){
+                    count++;
+                }
+            }
+
+            if (1 < count){
+                correct++;
+            }
+
             if (indexC < 0) {
                 int index = ord.indexOf(bokstav);
                 if (index >= 0) {
                     correct++;
-                    System.out.println("Guess was Correct");
+                    System.out.println("Your guess was correct, nice job!" + "\n");
                     right += " " + bokstav;
+                    word += " " + bokstav;
+
+
                 } else {
                     falskt++;
-                    System.out.println("Wrong, try again");
+                    System.out.println("Your guess was incorrect, try again!" + "\n");
+                    word += " " + bokstav;
                 }
             } else {
-                System.out.println("You have already guessed that");
+                System.out.println("This letter has already been guessed, guess another letter!" + "\n");
             }
-            word += " " + bokstav;
+
             check += bokstav;
-            System.out.println("So long you have guessed: " + word);
-            System.out.println("out of all these guesses the correct is: " + right);
+            System.out.println("All guesses: " + word);
+
+            // fixa så den visar ordet just nu
+            System.out.println("Correct guesses: " + right + "\n");
         }
 
         int resultat;
@@ -78,8 +97,8 @@ public class methods_Christian {
     public static void results(int resultat) {
 
         if (resultat > 0)
-            System.out.println("You won the game");
+            System.out.println("You won the game!" + "\n" + "Congratulations!");
         else
-            System.out.println("You lost the game");
+            System.out.println("Game over" + "\n" + "Better luck next time!");
     }
 }
