@@ -51,7 +51,7 @@ public class methods_Christian {
                 if (index >= 0) {
                     correct++;
                     System.out.println("Guess was Correct");
-                    right += bokstav;
+                    right += " " + bokstav;
                 } else {
                     falskt++;
                     System.out.println("Wrong, try again");
@@ -59,7 +59,7 @@ public class methods_Christian {
             } else {
                 System.out.println("You have already guessed that");
             }
-            word += bokstav;
+            word += " " + bokstav;
             check += bokstav;
             System.out.println("So long you have guessed: " + word);
             System.out.println("out of all these guesses the correct is: " + right);
