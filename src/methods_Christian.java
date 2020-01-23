@@ -20,6 +20,7 @@ public class methods_Christian {
         Scanner kb = new Scanner(System.in);
 
         //ordvalet
+        System.out.println("Write the word you would like your opponent to guess!");
         String ord = kb.nextLine();
 
         return ord;
@@ -37,6 +38,7 @@ public class methods_Christian {
 
         String check = "";
         String word = "";
+        String right = "";
 
         while (falskt < 10 && correct < längd) {
             System.out.println("Guess a letter");
@@ -49,7 +51,7 @@ public class methods_Christian {
                 if (index >= 0) {
                     correct++;
                     System.out.println("Guess was Correct");
-                    word += bokstav;
+                    right += bokstav;
                 } else {
                     falskt++;
                     System.out.println("Wrong, try again");
@@ -57,8 +59,10 @@ public class methods_Christian {
             } else {
                 System.out.println("You have already guessed that");
             }
+            word += bokstav;
             check += bokstav;
-            System.out.println("So long you have written: " + word);
+            System.out.println("So long you have guessed: " + word);
+            System.out.println("out of all these guesses the correct is: " + right);
         }
 
         int resultat;

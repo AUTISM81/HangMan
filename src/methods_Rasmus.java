@@ -13,7 +13,7 @@ public class methods_Rasmus {
 
         // dator väljer ord
         String ord;
-        try (Stream<String> lines = Files.lines(Paths.get("wordlist.md"))) {
+        try (Stream<String> lines = Files.lines(Paths.get("res/wordlist.md"))) {
             ord = lines.skip(randomInt).findFirst().get();
         }
 
