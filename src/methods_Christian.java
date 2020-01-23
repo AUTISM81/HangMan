@@ -36,6 +36,7 @@ public class methods_Christian {
         int längd = ord.length();
 
         String check = "";
+        String word = "";
 
         while (falskt < 10 && correct < längd) {
             System.out.println("Guess a letter");
@@ -47,26 +48,30 @@ public class methods_Christian {
                 int index = ord.indexOf(bokstav);
                 if (index >= 0) {
                     correct++;
+                    System.out.println("Guess was Correct");
+                    word += bokstav;
                 } else {
                     falskt++;
+                    System.out.println("Wrong, try again");
                 }
             } else {
                 System.out.println("You have already guessed that");
             }
             check += bokstav;
+            System.out.println("So long you have written: " + word);
         }
 
-        int result;
+        int resultat;
 
         if (correct == 10)
-            result = correct;
+            resultat = correct;
         else
-            result = falskt * -1;
+            resultat = falskt * -1;
 
-        return result;
+        return resultat;
     }
 
-    public static void resultat(String[] args) {
+    public static void results(int resultat) {
 
         if (resultat > 0)
             System.out.println("You won the game");

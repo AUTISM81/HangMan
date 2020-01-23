@@ -15,5 +15,7 @@ public class HangMan {
         }
 
         methods_Christian.gissa_ordet(ord);
+
+        methods_Christian.results(resultat);
     }
 }
