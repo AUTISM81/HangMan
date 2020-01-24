@@ -42,6 +42,7 @@ public class methods_Christian {
         String check = "";
         String word = "";
         char[] array = new char[längd];
+        ord.toLowerCase();
 
         for (int i = 0; i < array.length; i++){
             array[i] = '-';
@@ -87,6 +88,8 @@ public class methods_Christian {
                         falskt++;
                         System.out.println("Your guess was incorrect, try again!" + "\n");
                         word += " " + bokstav;
+
+                        methods_Rasmus.Gubbe(falskt);
 
                         if (falskt == 1) {
                             System.out.println("");

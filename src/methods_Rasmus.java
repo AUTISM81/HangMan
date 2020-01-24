@@ -20,24 +20,12 @@ public class methods_Rasmus {
 
     }
 
-    public static void Gubbe() {
-        if (falskt = 1) {
+    public static void Gubbe(int falskt) {
+        if (falskt == 1) {
             System.out.println("===========");
         }
-        else if (falskt = 2){
-            System.out.println("| \n"
-            + "| \n"
-            + "| \n"
-            + "| \n"
-            + "| \n"
-            + "| \n"
-            + "| \n"
-            + "=========== \n"
-            );
-
-        }
-        else if (falskt = 3){
-            System.out.println(" +-----+ \n"
+        else if (falskt == 2){
+            System.out.println("        | \n"
             + "        | \n"
             + "        | \n"
             + "        | \n"
@@ -48,78 +36,90 @@ public class methods_Rasmus {
             );
 
         }
-        else if (falskt = 4){
-            System.out.println(" +-----+ \n"
-                    + " |    | \n"
-                    + " |    |\n"
-                    + "      |\n"
-                    + "      |\n"
-                    + "      |\n"
-                    + "      |\n"
+        else if (falskt == 3){
+            System.out.println(" +------+ \n"
+            + "        | \n"
+            + "        | \n"
+            + "        | \n"
+            + "        | \n"
+            + "        | \n"
+            + "        | \n"
+            + "=========== \n"
+            );
+
+        }
+        else if (falskt == 4){
+            System.out.println(" +------+ \n"
+                    + " |      | \n"
+                    + " |      |\n"
+                    + "        |\n"
+                    + "        |\n"
+                    + "        |\n"
+                    + "        |\n"
                     + "=========== \n"
             );
 
         }
-        else if (falskt = 5){
-            System.out.println(System.out.println(" +-----+ \n"
-                    + " |    | \n"
-                    + " |    |\n"
-                    + " o    |\n"
-                    + "      |\n"
-                    + "      |\n"
-                    + "      |\n"
+        else if (falskt == 5){
+            System.out.println(" +------+ \n"
+                    + " |      | \n"
+                    + " |      |\n"
+                    + " o      |\n"
+                    + "        |\n"
+                    + "        |\n"
+                    + "        |\n"
                     + "=========== \n");
         }
-        else if (falskt = 6){
-            System.out.println(" +-----+ \n"
-                    + " |    | \n"
-                    + " |    |\n"
-                    + " o    |\n"
-                    + " |    |\n"
-                    + "      |\n"
-                    + "      |\n"
+        else if (falskt == 6){
+            System.out.println(" +------+ \n"
+                    + " |      | \n"
+                    + " |      |\n"
+                    + " o      |\n"
+                    + " |      |\n"
+                    + "        |\n"
+                    + "        |\n"
                     + "=========== \n");
         }
-        else if (falskt = 7){
-            System.out.println(" +-----+ \n"
-                    + " |    | \n"
-                    + " |    |\n"
-                    + " o    |\n"
-                    + " |    |\n"
-                    + "/     |\n"
-                    + "      |\n"
-                    + "=========== \n");
-
-        }
-        else if (falskt = 8){
-            System.out.println(" +-----+ \n"
-                    + " |    | \n"
-                    + " |    |\n"
-                    + " o    |\n"
-                    + " |    |\n"
-                    + "/ \\   |\n"
-                    + "      |\n"
-                    + "=========== \n");
-        }
-        else if (falskt = 9){
-            System.out.println(" +-----+ \n"
-                    + " |    | \n"
-                    + " |    |\n"
-                    + "\\o    |\n"
-                    + " |    |\n"
-                    + "/ \\   |\n"
-                    + "      |\n"
+        else if (falskt == 7){
+            System.out.println(" +------+ \n"
+                    + " |      | \n"
+                    + " |      |\n"
+                    + " o      |\n"
+                    + " |      |\n"
+                    + "/       |\n"
+                    + "        |\n"
                     + "=========== \n");
 
         }
-        else if (falskt = 10) {
-            System.out.println(" +-----+ \n"
-                    + " |    | \n"
-                    + " |    |\n"
-                    + "\\o/    |\n"
-                    + " |    |\n"
-                    + "/ \\   |\n"
-                    + "      |\n"
+        else if (falskt == 8){
+            System.out.println(" +------+ \n"
+                    + " |      | \n"
+                    + " |      |\n"
+                    + " o      |\n"
+                    + " |      |\n"
+                    + "/ \\     |\n"
+                    + "        |\n"
+                    + "=========== \n");
+        }
+        else if (falskt == 9){
+            System.out.println(" +------+ \n"
+                    + " |      | \n"
+                    + " |      |\n"
+                    + "\\o      |\n"
+                    + " |      |\n"
+                    + "/ \\     |\n"
+                    + "        |\n"
+                    + "=========== \n");
+
+        }
+        else if (falskt == 10) {
+            System.out.println(" +------+ \n"
+                    + " |      | \n"
+                    + " |      |\n"
+                    + "\\o/     |\n"
+                    + " |      |\n"
+                    + "/ \\     |\n"
+                    + "        |\n"
                     + "=========== \n");
         }
     }
