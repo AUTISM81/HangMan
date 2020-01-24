@@ -46,56 +46,67 @@ public class methods_Christian {
         for (int i = 0; i < array.length; i++){
             array[i] = '-';
         }
-        System.out.println("");
+        System.out.println();
 
         while (falskt < 10 && correct < längd) {
-            System.out.println("Guess a letter");
-            char bokstav = kb.next().charAt(0);
-            
+            System.out.println("Guess a letter or the word");
+            String gissning = kb.next();
+
+            char bokstav = gissning.charAt(0);
+
             int indexC = check.indexOf(bokstav);
 
             int count = 0;
 
-            for (int i = 0; i < längd; i++){
-                if (ord.charAt(i) == bokstav){
-                    count++;
+
+            if (!gissning.equals(ord)) {
+                for (int i = 0; i < längd; i++) {
+                    if (ord.charAt(i) == bokstav) {
+                        count++;
+                    }
                 }
-            }
 
-            if (1 < count){
-                correct++;
-            }
-
-            if (indexC < 0) {
-                int index = ord.indexOf(bokstav);
-                if (index >= 0) {
+                if (1 < count) {
                     correct++;
-                    System.out.println("Your guess was correct, nice job!" + "\n");
+                }
 
-                    for (int i = 0; i < array.length; i++){
-                        if (bokstav == ord.charAt(i)){
-                            array[i] = bokstav;
+                if (indexC < 0) {
+                    int index = ord.indexOf(bokstav);
+                    if (index >= 0) {
+                        correct++;
+                        System.out.println("Your guess was correct, nice job!" + "\n");
+
+                        for (int i = 0; i < array.length; i++) {
+                            if (bokstav == ord.charAt(i)) {
+                                array[i] = bokstav;
+                            }
+                        }
+                        System.out.println("");
+
+                    } else {
+                        falskt++;
+                        System.out.println("Your guess was incorrect, try again!" + "\n");
+                        word += " " + bokstav;
+
+                        if (falskt == 1) {
+                            System.out.println("");
                         }
                     }
-                    System.out.println("");
-
                 } else {
-                    falskt++;
-                    System.out.println("Your guess was incorrect, try again!" + "\n");
-                    word += " " + bokstav;
+                    System.out.println("This letter has already been guessed, guess another letter!" + "\n");
                 }
+
+                check += bokstav;
+                System.out.println("guesses: " + word);
+
+                System.out.print("word:");
+                for (int i = 0; i < array.length; i++) {
+                    System.out.print(array[i]);
+                }
+                System.out.println();
             } else {
-                System.out.println("This letter has already been guessed, guess another letter!" + "\n");
+                correct = längd;
             }
-
-            check += bokstav;
-            System.out.println("guesses: " + word);
-
-            System.out.print("word:" );
-            for (int i = 0; i < array.length; i++){
-                System.out.print(array[i]);
-            }
-            System.out.println();
         }
 
         int resultat;
