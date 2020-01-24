@@ -52,7 +52,8 @@ public class methods_Christian {
         while (falskt < 10 && correct < längd) {
             System.out.println("Guess a letter or the word");
             String gissning = kb.next();
-
+            gissning.toLowerCase();
+            
             char bokstav = gissning.charAt(0);
 
             int indexC = check.indexOf(bokstav);
