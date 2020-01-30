@@ -7,11 +7,11 @@ import java.util.stream.Stream;
 public class methods_Rasmus {
     public static String Dator() throws IOException {
 
-        // slumpar rad
+        // Dator slumpar rad
         Random randomGenerator = new Random();
         int randomInt = randomGenerator.nextInt(855);
 
-        // dator väljer ord
+        // Dator väljer ord som är på den slumpade raden
         String ord;
         try (Stream<String> lines = Files.lines(Paths.get("res/wordlist.md"))) {
             ord = lines.skip(randomInt).findFirst().get();
@@ -20,6 +20,7 @@ public class methods_Rasmus {
 
     }
 
+    // Dator printar ut ASCII Art beroende på antal fel
     public static void Gubbe(int falskt) {
         if (falskt == 1) {
             System.out.println("===========");
