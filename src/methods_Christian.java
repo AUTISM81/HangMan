@@ -148,17 +148,18 @@ public class methods_Christian {
             System.out.println("Game over" + "\n" + "Better luck next time!");
     }
 
-    public static boolean Restart(){
+    public static boolean Restart(boolean game){
         //scanner
         Scanner kb = new Scanner(System.in);
 
-        System.out.print("Would you like to play another game? Yes or no?");
+        System.out.println("Would you like to play another game? Yes or no?");
 
         String ans = kb.nextLine();
         ans.toLowerCase();
         if (!ans.equals("yes")){
             game = false;
+            System.out.println("Thank you for playing");
         }
-        return  game;
+        return game;
     }
 }

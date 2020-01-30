@@ -21,6 +21,8 @@ public class HangMan {
 
             methods_Christian.results(resultat);
             System.out.println("The word was:" + ord);
+
+            game = methods_Christian.Restart(game);
         }
 
 
